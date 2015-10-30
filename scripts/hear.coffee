@@ -13,7 +13,7 @@ module.exports = (robot) ->
   robot.brain.data.dialogue = {}
 
   robot.hear /.*/, (msg) ->
-    if 0.1 <= Math.random()
+    if !/^@kitanyan/.test(msg.message.text) && 0.1 <= Math.random()
       return
 
     messages = [
@@ -26,3 +26,15 @@ module.exports = (robot) ->
     ]
 
     msg.reply msg.random messages
+
+  robot.hear /.*(メタップス).*/, (msg) ->
+    messages = [
+      ":kitanyan: 「メタップス細胞な」",
+      ":kitanyan: 「メタップス細胞だろ」",
+      ":kitanyan: 「メタップス細胞がどうしました？」",
+      ":kitanyan: 「メタップス細胞はありますか？」",
+      ":kitanyan: 「ちがうちがう、メタップス細胞や」",
+    ]
+
+    msg.reply msg.random messages
+
