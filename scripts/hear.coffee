@@ -12,8 +12,8 @@ module.exports = (robot) ->
 
   robot.brain.data.dialogue = {}
 
-  robot.hear /.*/, (msg) ->
-    if !/^@kitanyan/.test(msg.message.text) && 0.1 <= Math.random()
+  robot.hear /.*/, (res) ->
+    if !/^@kitanyan/.test(res.message.text) && 0.1 <= Math.random()
       return
 
     messages = [
@@ -25,9 +25,9 @@ module.exports = (robot) ->
       ":kitanyan: 「それあかんパティーンや」",
     ]
 
-    msg.reply msg.random messages
+    res.send res.random messages
 
-  robot.hear /.*(メタップス).*/, (msg) ->
+  robot.hear /.*(メタップス).*/, (res) ->
     messages = [
       ":kitanyan: 「メタップス細胞な」",
       ":kitanyan: 「メタップス細胞だろ」",
@@ -36,5 +36,5 @@ module.exports = (robot) ->
       ":kitanyan: 「ちがうちがう、メタップス細胞や」",
     ]
 
-    msg.reply msg.random messages
+    res.send res.random messages
 
