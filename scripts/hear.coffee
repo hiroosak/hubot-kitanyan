@@ -22,6 +22,11 @@ module.exports = (robot) ->
       ":kitanyan: 「せやな」",
       ":kitanyan: 「それな」",
       ":kitanyan: 「あるわー」",
+      ":kitanyan: 「ないわー」",
+      ":kitanyan: 「そんなときもあるよね」",
+      ":kitanyan: 「うんうん」",
+      ":kitanyan: 「ですよねえ」",
+      ":kitanyan: 「間違いじゃないんですけどねえ」",
       ":kitanyan: 「それあかんパティーンや」",
     ]
 
